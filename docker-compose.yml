@@ -1,0 +1,70 @@
+services:
+
+
+  mysql:
+    container_name: mysqlDB
+    build:
+      context: ./dtubeMYSQL
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dtube
+    restart: always
+    volumes:
+      - my-datavolume:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+
+  frontend:
+    container_name: D-TubeMVC
+    build:
+      context: ./D-TubeMVC
+      dockerfile: Dockerfile
+    ports:
+      - 10000:10000
+
+
+  video-stream:
+    container_name: VideoStreamREST
+    build:
+      context: ./VideoStreamREST
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - 9090:9090
+
+
+
+  video-upload:
+      container_name: uploadVideoREST
+      build:
+        context: ./uploadVideoREST
+        dockerfile: Dockerfile
+      depends_on:
+        - mysql
+      ports:
+        - 9091:9091
+
+
+  web-authentication:
+        container_name: AuthenticationREST
+        build:
+          context: ./AuthenticationREST
+          dockerfile: Dockerfile
+        ports:
+          - 8080:8080
+
+
+  file-storage:
+          container_name: FileStorageREST
+          build:
+            context: ./FileStorageREST
+            dockerfile: Dockerfile
+          ports:
+            - 9999:9999
+
+
+volumes:
+  my-datavolume:

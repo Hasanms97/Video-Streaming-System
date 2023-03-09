@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AuthenticationREST/Authentication.iml" filepath="$PROJECT_DIR$/AuthenticationREST/Authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D-TubeMVC/D-Tube.iml" filepath="$PROJECT_DIR$/D-TubeMVC/D-Tube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileStorageREST/FileStorage.iml" filepath="$PROJECT_DIR$/FileStorageREST/FileStorage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Source code.iml" filepath="$PROJECT_DIR$/.idea/Source code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoStreamREST/VideoStreamREST.iml" filepath="$PROJECT_DIR$/VideoStreamREST/VideoStreamREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploadVideoREST/uploadVideoREST.iml" filepath="$PROJECT_DIR$/uploadVideoREST/uploadVideoREST.iml" />
+    </modules>
+  </component>
+</project>

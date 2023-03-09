@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="FileStorage" />
+        <module name="VideoStreamREST" />
+        <module name="D-Tube" />
+        <module name="uploadVideoREST" />
+        <module name="Authentication" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Authentication" target="19" />
+      <module name="D-Tube" target="19" />
+      <module name="FileStorage" target="19" />
+      <module name="uploadVideoREST" target="19" />
+      <module name="VideoStreamREST" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Authentication" options="-parameters" />
+      <module name="D-Tube" options="-parameters" />
+      <module name="FileStorage" options="-parameters" />
+      <module name="VideoStreamREST" options="-parameters" />
+      <module name="uploadVideoREST" options="-parameters" />
+    </option>
+  </component>
+</project>
